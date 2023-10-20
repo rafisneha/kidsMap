@@ -1,0 +1,22 @@
+<div class="body">
+<div  *ngFor="let s of sWords">
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{s.image}}" class="img-fluid rounded-start" alt="image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Level {{s.level}}</h5>
+          
+            <span   class="buttonspace" *ngFor="let w of s.words">
+              <button type="button" class="btn btn-outline-primary">{{w}}</button>
+            </span>
+
+          <p class="card-text"><small class="text-body-secondary">{{s.greet}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
